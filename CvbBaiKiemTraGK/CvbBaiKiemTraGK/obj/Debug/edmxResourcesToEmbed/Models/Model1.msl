@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CvbK22CNT4Lesson07dbModelStoreContainer" CdmEntityContainer="CvbK22CNT4Lesson07dbEntities">
+    <EntitySetMapping Name="cvbKhoa">
+      <EntityTypeMapping TypeName="CvbK22CNT4Lesson07dbModel.cvbKhoa">
+        <MappingFragment StoreEntitySet="cvbKhoa">
+          <ScalarProperty Name="CvbMaKH" ColumnName="CvbMaKH" />
+          <ScalarProperty Name="CvbTenKH" ColumnName="CvbTenKH" />
+          <ScalarProperty Name="CvbTrangThai" ColumnName="CvbTrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cvbSinhVien">
+      <EntityTypeMapping TypeName="CvbK22CNT4Lesson07dbModel.cvbSinhVien">
+        <MappingFragment StoreEntitySet="cvbSinhVien">
+          <ScalarProperty Name="CvbMaSV" ColumnName="CvbMaSV" />
+          <ScalarProperty Name="CvbHoSV" ColumnName="CvbHoSV" />
+          <ScalarProperty Name="CvbTenSV" ColumnName="CvbTenSV" />
+          <ScalarProperty Name="CvbNgaySinh" ColumnName="CvbNgaySinh" />
+          <ScalarProperty Name="CvbPhai" ColumnName="CvbPhai" />
+          <ScalarProperty Name="CvbPhone" ColumnName="CvbPhone" />
+          <ScalarProperty Name="CvbEmail" ColumnName="CvbEmail" />
+          <ScalarProperty Name="CvbMaKh" ColumnName="CvbMaKh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

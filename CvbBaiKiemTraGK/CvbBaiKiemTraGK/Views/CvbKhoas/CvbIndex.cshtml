@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CvbBaiKiemTraGK.Models.cvbKhoa>
+
+@{
+    ViewBag.Title = "CvbIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CvbCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbTenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbTrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbTenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbTrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("CvbEdit", "CvbEdit", new { id=item.CvbMaKH }) |
+            @Html.ActionLink("CvbDetails", "CvbDetails", new { id=item.CvbMaKH }) |
+            @Html.ActionLink("CvbDelete", "CvbDelete", new { id=item.CvbMaKH })
+        </td>
+    </tr>
+}
+
+</table>
