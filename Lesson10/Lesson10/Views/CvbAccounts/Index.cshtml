@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Lesson10.Models.CvbAccount>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbUseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbAcive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbUseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbAcive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CvbID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CvbID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CvbID })
+        </td>
+    </tr>
+}
+
+</table>

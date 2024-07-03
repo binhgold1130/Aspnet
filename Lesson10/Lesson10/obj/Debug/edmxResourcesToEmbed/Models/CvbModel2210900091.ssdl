@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CvbLesson10Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CvbAccount">
+    <Key>
+      <PropertyRef Name="CvbID" />
+    </Key>
+    <Property Name="CvbID" Type="int" Nullable="false" />
+    <Property Name="CvbUseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CvbPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="CvbFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CvbEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="CvbPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="CvbAcive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="CvbLesson10ModelStoreContainer">
+    <EntitySet Name="CvbAccount" EntityType="Self.CvbAccount" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

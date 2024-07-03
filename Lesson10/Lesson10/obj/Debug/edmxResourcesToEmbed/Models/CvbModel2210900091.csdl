@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CvbLesson10Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CvbAccount">
+    <Key>
+      <PropertyRef Name="CvbID" />
+    </Key>
+    <Property Name="CvbID" Type="Int32" Nullable="false" />
+    <Property Name="CvbUseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CvbPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CvbFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CvbEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CvbPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CvbAcive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="CvbLesson10Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CvbAccount" EntityType="Self.CvbAccount" />
+  </EntityContainer>
+</Schema>

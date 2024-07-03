@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CvbLesson10Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CvbAccount">
+          <Key>
+            <PropertyRef Name="CvbID" />
+          </Key>
+          <Property Name="CvbID" Type="int" Nullable="false" />
+          <Property Name="CvbUseName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CvbPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="CvbFullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CvbEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="CvbPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="CvbAcive" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="CvbLesson10ModelStoreContainer">
+          <EntitySet Name="CvbAccount" EntityType="Self.CvbAccount" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CvbLesson10Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CvbAccount">
+          <Key>
+            <PropertyRef Name="CvbID" />
+          </Key>
+          <Property Name="CvbID" Type="Int32" Nullable="false" />
+          <Property Name="CvbUseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CvbPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CvbFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CvbEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CvbPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CvbAcive" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="CvbLesson10Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CvbAccount" EntityType="Self.CvbAccount" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CvbLesson10ModelStoreContainer" CdmEntityContainer="CvbLesson10Entities">
+          <EntitySetMapping Name="CvbAccount">
+            <EntityTypeMapping TypeName="CvbLesson10Model.CvbAccount">
+              <MappingFragment StoreEntitySet="CvbAccount">
+                <ScalarProperty Name="CvbID" ColumnName="CvbID" />
+                <ScalarProperty Name="CvbUseName" ColumnName="CvbUseName" />
+                <ScalarProperty Name="CvbPassword" ColumnName="CvbPassword" />
+                <ScalarProperty Name="CvbFullName" ColumnName="CvbFullName" />
+                <ScalarProperty Name="CvbEmail" ColumnName="CvbEmail" />
+                <ScalarProperty Name="CvbPhone" ColumnName="CvbPhone" />
+                <ScalarProperty Name="CvbAcive" ColumnName="CvbAcive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

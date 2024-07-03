@@ -1,0 +1,73 @@
+﻿@model Lesson10.Models.CvbAccount
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CvbAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbUseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbUseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbAcive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbAcive)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

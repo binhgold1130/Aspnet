@@ -1,0 +1,67 @@
+﻿@model Lesson10.Models.CvbAccount
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CvbAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbUseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbUseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbAcive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbAcive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CvbID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CvbLesson10ModelStoreContainer" CdmEntityContainer="CvbLesson10Entities">
+    <EntitySetMapping Name="CvbAccount">
+      <EntityTypeMapping TypeName="CvbLesson10Model.CvbAccount">
+        <MappingFragment StoreEntitySet="CvbAccount">
+          <ScalarProperty Name="CvbID" ColumnName="CvbID" />
+          <ScalarProperty Name="CvbUseName" ColumnName="CvbUseName" />
+          <ScalarProperty Name="CvbPassword" ColumnName="CvbPassword" />
+          <ScalarProperty Name="CvbFullName" ColumnName="CvbFullName" />
+          <ScalarProperty Name="CvbEmail" ColumnName="CvbEmail" />
+          <ScalarProperty Name="CvbPhone" ColumnName="CvbPhone" />
+          <ScalarProperty Name="CvbAcive" ColumnName="CvbAcive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

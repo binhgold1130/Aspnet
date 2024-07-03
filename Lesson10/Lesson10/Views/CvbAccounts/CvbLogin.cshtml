@@ -1,0 +1,48 @@
+﻿@model Lesson10.Models.CvbAccount
+@{
+    ViewBag.Title = "CvbLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Đăng nhập hệ thống</h2>
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+       
+        <hr />
+       
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CvbUseName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CvbUseName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CvbUseName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CvbPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CvbPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CvbPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+      
+
+        
+       
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create"CVB: Login="btn btn-prinary my-2" />
+            </div>
+        </div>
+    </div>
+}
