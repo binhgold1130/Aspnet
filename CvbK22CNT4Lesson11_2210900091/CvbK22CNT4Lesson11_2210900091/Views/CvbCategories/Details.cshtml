@@ -1,0 +1,35 @@
+﻿@model CvbK22CNT4Lesson11_2210900091.Models.CvbCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Cvb2210900091Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CvbCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbCategory1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbCategory1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CvbID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

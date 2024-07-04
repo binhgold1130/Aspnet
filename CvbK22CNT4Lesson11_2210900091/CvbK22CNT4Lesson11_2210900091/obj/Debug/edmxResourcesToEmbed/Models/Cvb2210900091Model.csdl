@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CvbLesson11Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CvbCategory">
+    <Key>
+      <PropertyRef Name="CvbID" />
+    </Key>
+    <Property Name="CvbID" Type="Int32" Nullable="false" />
+    <Property Name="CvbCategory1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CvbStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CvbProduct">
+    <Key>
+      <PropertyRef Name="CvbId2210900091" />
+    </Key>
+    <Property Name="CvbId2210900091" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CvbProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CvbQty" Type="Int32" />
+    <Property Name="CvbPrice" Type="Double" />
+    <Property Name="CvbCateld" Type="Int32" />
+    <Property Name="CvbActive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="CvbLesson11Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CvbCategories" EntityType="Self.CvbCategory" />
+    <EntitySet Name="CvbProducts" EntityType="Self.CvbProduct" />
+  </EntityContainer>
+</Schema>

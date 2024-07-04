@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CvbLesson11ModelStoreContainer" CdmEntityContainer="CvbLesson11Entities">
+    <EntitySetMapping Name="CvbCategories">
+      <EntityTypeMapping TypeName="CvbLesson11Model.CvbCategory">
+        <MappingFragment StoreEntitySet="CvbCategory">
+          <ScalarProperty Name="CvbID" ColumnName="CvbID" />
+          <ScalarProperty Name="CvbCategory1" ColumnName="CvbCategory" />
+          <ScalarProperty Name="CvbStatus" ColumnName="CvbStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CvbProducts">
+      <EntityTypeMapping TypeName="CvbLesson11Model.CvbProduct">
+        <MappingFragment StoreEntitySet="CvbProduct">
+          <ScalarProperty Name="CvbId2210900091" ColumnName="CvbId2210900091" />
+          <ScalarProperty Name="CvbProName" ColumnName="CvbProName" />
+          <ScalarProperty Name="CvbQty" ColumnName="CvbQty" />
+          <ScalarProperty Name="CvbPrice" ColumnName="CvbPrice" />
+          <ScalarProperty Name="CvbCateld" ColumnName="CvbCateld" />
+          <ScalarProperty Name="CvbActive" ColumnName="CvbActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

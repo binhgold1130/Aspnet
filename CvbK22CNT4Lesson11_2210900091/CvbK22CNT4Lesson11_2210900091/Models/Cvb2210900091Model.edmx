@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CvbLesson11Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CvbCategory">
+          <Key>
+            <PropertyRef Name="CvbID" />
+          </Key>
+          <Property Name="CvbID" Type="int" Nullable="false" />
+          <Property Name="CvbCategory" Type="nvarchar" MaxLength="50" />
+          <Property Name="CvbStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="CvbProduct">
+          <Key>
+            <PropertyRef Name="CvbId2210900091" />
+          </Key>
+          <Property Name="CvbId2210900091" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CvbProName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CvbQty" Type="int" />
+          <Property Name="CvbPrice" Type="float" />
+          <Property Name="CvbCateld" Type="int" />
+          <Property Name="CvbActive" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="CvbLesson11ModelStoreContainer">
+          <EntitySet Name="CvbCategory" EntityType="Self.CvbCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CvbProduct" EntityType="Self.CvbProduct" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CvbLesson11Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CvbCategory">
+          <Key>
+            <PropertyRef Name="CvbID" />
+          </Key>
+          <Property Name="CvbID" Type="Int32" Nullable="false" />
+          <Property Name="CvbCategory1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CvbStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="CvbProduct">
+          <Key>
+            <PropertyRef Name="CvbId2210900091" />
+          </Key>
+          <Property Name="CvbId2210900091" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CvbProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CvbQty" Type="Int32" />
+          <Property Name="CvbPrice" Type="Double" />
+          <Property Name="CvbCateld" Type="Int32" />
+          <Property Name="CvbActive" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="CvbLesson11Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CvbCategories" EntityType="Self.CvbCategory" />
+          <EntitySet Name="CvbProducts" EntityType="Self.CvbProduct" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CvbLesson11ModelStoreContainer" CdmEntityContainer="CvbLesson11Entities">
+          <EntitySetMapping Name="CvbCategories">
+            <EntityTypeMapping TypeName="CvbLesson11Model.CvbCategory">
+              <MappingFragment StoreEntitySet="CvbCategory">
+                <ScalarProperty Name="CvbID" ColumnName="CvbID" />
+                <ScalarProperty Name="CvbCategory1" ColumnName="CvbCategory" />
+                <ScalarProperty Name="CvbStatus" ColumnName="CvbStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CvbProducts">
+            <EntityTypeMapping TypeName="CvbLesson11Model.CvbProduct">
+              <MappingFragment StoreEntitySet="CvbProduct">
+                <ScalarProperty Name="CvbId2210900091" ColumnName="CvbId2210900091" />
+                <ScalarProperty Name="CvbProName" ColumnName="CvbProName" />
+                <ScalarProperty Name="CvbQty" ColumnName="CvbQty" />
+                <ScalarProperty Name="CvbPrice" ColumnName="CvbPrice" />
+                <ScalarProperty Name="CvbCateld" ColumnName="CvbCateld" />
+                <ScalarProperty Name="CvbActive" ColumnName="CvbActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
