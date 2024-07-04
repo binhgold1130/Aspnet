@@ -34,7 +34,16 @@
         @Html.DisplayFor(modelItem => item.CvbCategory1)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.CvbStatus)
+        @*Html.DisplayFor(modelItem => item.CvbStatus)*@
+
+        @if (item.CvbStatus == true)
+                {
+                    <span style="color:green"> Hoạt động </span>
+                }
+        else
+        {
+             <span style="color:red"> Không hoạt động </span>
+        }
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.CvbID }) |

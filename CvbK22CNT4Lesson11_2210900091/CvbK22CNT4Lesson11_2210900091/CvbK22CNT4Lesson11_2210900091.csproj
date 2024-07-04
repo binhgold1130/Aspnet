@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CvbCategoriesController.cs" />
     <Compile Include="Controllers\CvbHomeController.cs" />
+    <Compile Include="Controllers\CvbProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,6 +215,11 @@
     <Content Include="Views\CvbCategories\Details.cshtml" />
     <Content Include="Views\CvbCategories\Edit.cshtml" />
     <Content Include="Views\CvbCategories\CvbIndex.cshtml" />
+    <Content Include="Views\CvbProducts\Create.cshtml" />
+    <Content Include="Views\CvbProducts\Delete.cshtml" />
+    <Content Include="Views\CvbProducts\Details.cshtml" />
+    <Content Include="Views\CvbProducts\Edit.cshtml" />
+    <Content Include="Views\CvbProducts\CvbIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

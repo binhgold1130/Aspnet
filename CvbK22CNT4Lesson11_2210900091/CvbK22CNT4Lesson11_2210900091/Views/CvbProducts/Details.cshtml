@@ -1,0 +1,59 @@
+﻿@model CvbK22CNT4Lesson11_2210900091.Models.CvbProduct
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Cvb2210900091Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CvbProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbProName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbProName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbCateld)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbCateld)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbActive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CvbId2210900091 }) |
+    @Html.ActionLink("Back to List", "CvbIndex")
+</p>

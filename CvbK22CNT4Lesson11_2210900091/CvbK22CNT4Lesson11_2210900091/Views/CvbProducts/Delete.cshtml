@@ -1,0 +1,65 @@
+﻿@model CvbK22CNT4Lesson11_2210900091.Models.CvbProduct
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Cvb2210900091Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CvbProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbProName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbProName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbCateld)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbCateld)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CvbActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CvbActive)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "CvbIndex")
+        </div>
+    }
+</div>

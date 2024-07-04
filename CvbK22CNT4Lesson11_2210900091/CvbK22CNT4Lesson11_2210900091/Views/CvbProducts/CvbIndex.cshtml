@@ -1,0 +1,66 @@
+﻿@model IEnumerable<CvbK22CNT4Lesson11_2210900091.Models.CvbProduct>
+
+@{
+    ViewBag.Title = "Danh sách sản phẩm";
+    Layout = "~/Views/Shared/_Cvb2210900091Layout.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbId2210900091)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbCateld)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CvbActive)
+        </th>
+        <th>Chức năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbId2210900091)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CvbCateld)
+        </td>
+        <td>
+            @*Html.DisplayFor(modelItem => item.CvbActive)*@
+            @if (item.CvbActive == true)
+            {
+                <span style="color:green"> Hoạt động </span>
+            }
+            else
+            {
+                <span style="color:red"> Không hoạt động </span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CvbId2210900091 }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CvbId2210900091 }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CvbId2210900091 })
+        </td>
+    </tr>
+}
+
+</table>
